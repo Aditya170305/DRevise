@@ -17,6 +17,10 @@ public class FibonacciSeris {
     } 
 
     public static void main(String[] args) {
+
+        //By Memoization
+        // Tc -> O(N);
+        // Sc -> O(N) + O(N) ---> For Array
         
         int n;
 
