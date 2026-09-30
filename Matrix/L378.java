@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+public class L378 {
+    
+    public int kthSmallest(int[][] matrix, int k) {
+        
+        int n = matrix.length;
+        int m = matrix[0].length;
+
+        int arr [] = new int [n * m];
+
+        int index = 0;
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+
+                arr[index] = matrix[i][j];
+                index++;
+
+            }
+
+        }
+
+        Arrays.sort(arr);
+
+        int ele = 0;
+
+        for(int i=0;i<arr.length;i++){
+
+            if(i == k - 1){
+                ele = arr[i];
+                break;
+            }
+
+        }
+
+        return ele;
+
+    }
+
+}
